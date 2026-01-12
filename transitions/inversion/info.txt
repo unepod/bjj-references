@@ -1,0 +1,10 @@
+Technique: Inversion
+ID: inversion
+Category: transitions
+Position: Guard
+Belt: Blue
+Gi Only: No
+
+Search queries used:
+- inversion BJJ technique
+- inversion guard retention

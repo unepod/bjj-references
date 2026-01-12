@@ -1,0 +1,10 @@
+Technique: RNC Defense
+ID: rnc_defense
+Category: escapes
+Position: RNC Bottom
+Belt: White
+Gi Only: No
+
+Search queries used:
+- rear naked choke defense BJJ technique
+- RNC escape defense

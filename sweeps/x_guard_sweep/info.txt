@@ -1,0 +1,10 @@
+Technique: X Guard Sweep
+ID: x_guard_sweep
+Category: sweeps
+Position: X Guard
+Belt: Blue
+Gi Only: No
+
+Search queries used:
+- x guard sweep BJJ technique
+- x guard technical sweep
