@@ -110,7 +110,19 @@
       "Bash(done)",
       "Bash(git fetch:*)",
       "Bash(for:*)",
-      "Bash(jq:*)"
+      "Bash(jq:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(chmod:*)",
+      "Bash(tree:*)",
+      "Bash(source:*)",
+      "Bash(python download_images.py:*)",
+      "Bash(python:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "Bash(./download_wikimedia.sh:*)",
+      "Bash(find:*)",
+      "WebFetch(domain:www.grapplearts.com)",
+      "WebFetch(domain:evolve-mma.com)"
     ]
   }
 }
