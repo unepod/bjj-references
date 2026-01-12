@@ -1,30 +1,27 @@
 # BJJ References Project
 
-Generate reference images and image-generation prompts for BJJ technique illustrations.
+Generate reference image URLs and image-generation prompts for BJJ technique illustrations.
 
 ## Project Overview
 
 This project creates minimalist vector-style illustrations for ~215 BJJ techniques. The workflow has two phases:
-1. **Phase 1: Image Scraping** - Download reference images from the web for each technique
-2. **Phase 2: Prompt Generation** - Generate image-generation prompts based on curated references
+1. **Phase 1: Folder Structure & URLs** - Create folders, search for reference images, save URLs
+2. **Phase 2: Prompt Generation** - Generate image-generation prompts based on web research
 
-The user will manually review images between phases to ensure accuracy.
+Image downloading is handled separately (Claude Code cannot reliably download images).
 
 ## File Structure
 
 ```
-~/apps/bjj_references/
+.
 ├── CLAUDE.md                     # This file
 ├── bjj_moves.md                  # Source: all techniques with IDs, names, categories
 ├── all_prompts.md                # Output: compiled prompts (Phase 2)
-├── all_prompts.json              # Output: prompts in JSON format (Phase 2)
 ├── positions/
 │   ├── side_control_top/
-│   │   ├── 01_photo_*.jpg        # Downloaded reference images
-│   │   ├── 02_diagram_*.jpg
-│   │   ├── info.txt              # Search queries, source URLs
-│   │   ├── prompt.txt            # Generated prompt (Phase 2)
-│   │   └── APPROVED              # Empty file = user approved refs (optional)
+│   │   ├── download_urls.txt     # URLs of reference images to download
+│   │   ├── info.txt              # Technique metadata, search queries
+│   │   └── prompt.txt            # Generated prompt (Phase 2)
 │   ├── mount_top/
 │   └── ...
 ├── submissions/
@@ -35,41 +32,49 @@ The user will manually review images between phases to ensure accuracy.
 └── transitions/
 ```
 
-## Phase 1: Image Scraping
+---
+
+## Phase 1: Folder Structure & URLs
 
 ### Command
-User says: "scrape images", "download references", "phase 1", or "get reference images"
+User says: "phase 1", "create folders", "find images", or "get URLs"
 
 ### Task
 For each technique in `bjj_moves.md`:
-1. Search web for reference images using queries like:
-   - "[Name] BJJ technique"
-   - "[Name] BJJ position photo"
-   - "[Name] grappling diagram"
-2. Download 5-8 candidate images to `./[category]/[ID]/`
-3. Name files descriptively: `01_photo_side_angle.jpg`, `02_diagram_top_view.jpg`
-4. Create `info.txt` with:
-   ```
-   Technique: [Name]
-   ID: [snake_case_id]
-   Category: [category]
-   Belt: [White/Blue]
-   Gi Only: [Yes/No]
-   
-   Search queries used:
-   - [query 1]
-   - [query 2]
-   
-   Sources:
-   - [filename]: [source URL]
-   ```
+1. Create folder `./[category]/[ID]/`
+2. Search web for "[Name] BJJ" reference images (photos, diagrams, illustrations)
+3. Save 5-8 image URLs to `./[category]/[ID]/download_urls.txt`
+4. Create `info.txt` with technique metadata
+
+### File: download_urls.txt
+```
+# Reference images for [Name]
+# Download these manually or with a download script
+
+https://example.com/image1.jpg
+https://example.com/image2.png
+https://example.com/diagram.jpg
+```
+
+### File: info.txt
+```
+Technique: [Name]
+ID: [snake_case_id]
+Category: [category]
+Belt: [White/Blue]
+Gi Only: [Yes/No]
+
+Search queries used:
+- [query 1]
+- [query 2]
+```
 
 ### Image Selection Preferences
 - Clear body positioning visible
-- High angle, isometric, or bird's eye views preferred
-- Both photos and diagrams/illustrations
+- High angle or isometric views preferred
+- Both photo and diagram/illustration styles
+- Gi and No-Gi examples
 - Show the technique being executed (not setup or finish)
-- Prefer images with clear contrast between fighters
 
 ### Priority Order
 1. Positions (White belt → Blue belt)
@@ -80,28 +85,19 @@ For each technique in `bjj_moves.md`:
 6. Escapes
 7. Transitions
 
-### Resume Support
-- Before downloading, check if folder already has images
-- Skip folders that already have 3+ images
-- User can say "rescrape [technique_id]" to force re-download
-
 ---
 
 ## Phase 2: Prompt Generation
 
 ### Command
-User says: "generate prompts", "phase 2", "create prompts", or "write prompts"
-
-### Prerequisites
-- Phase 1 completed
-- User has reviewed and curated reference images (deleted bad ones)
+User says: "phase 2", "generate prompts", or "write prompts"
 
 ### Task
-For each technique folder containing at least 1 image:
-1. Analyze the reference images in the folder
+For each technique in `bjj_moves.md`:
+1. Research the technique from authoritative BJJ websites
 2. Generate a prompt using the template below
 3. Save to `./[category]/[ID]/prompt.txt`
-4. Compile all prompts into `./all_prompts.md` and `./all_prompts.json`
+4. Compile all prompts into `./all_prompts.md`
 
 ### Prompt Template
 
@@ -116,33 +112,14 @@ Negative_prompt: "arrows, numbers, text, labels, annotations, [SIMILAR_TECHNIQUE
 | Variable | Description |
 |----------|-------------|
 | `[NAME]` | Human-readable name from bjj_moves.md |
-| `[BRIEF_DESCRIPTION]` | 1-2 sentences describing key body positioning based on reference images. Include: relative body angles, where limbs are, grips if gi technique |
-| `[SIMILAR_TECHNIQUES]` | 3-5 commonly confused positions to exclude (e.g., for Side Control: "mount, closed guard, kesa gatame, scarf hold, north south") |
+| `[BRIEF_DESCRIPTION]` | 1-2 sentences describing key body positioning from web research. Include: relative body angles, limb positions, grips if gi technique |
+| `[SIMILAR_TECHNIQUES]` | 3-5 commonly confused positions to exclude |
 
 ### Strict Rules
 - **Hero (person executing technique) = WHITE Gi** (always)
 - **Opponent = BLUE Gi (#2772b6)** (always)
 - If "Gi Only" = Yes in bjj_moves.md, mention gi grips in description
-- Skip folders with 0 images (user rejected all references)
-
-### Output Format for all_prompts.json
-
-```json
-{
-  "techniques": [
-    {
-      "id": "side_control_top",
-      "name": "Side Control Pressure",
-      "category": "positions",
-      "belt": "White",
-      "gi_only": false,
-      "prompt": "...",
-      "negative_prompt": "...",
-      "reference_images": ["positions/side_control_top/01_photo.jpg"]
-    }
-  ]
-}
-```
+- Research from authoritative BJJ sites (Grapplearts, BJJ Fanatics, Evolve MMA, etc.)
 
 ---
 
@@ -171,14 +148,11 @@ Use this to populate `[SIMILAR_TECHNIQUES]` in negative prompts:
 
 | User Says | Action |
 |-----------|--------|
-| "scrape images" / "phase 1" | Run Phase 1 for all techniques |
-| "scrape [category]" | Run Phase 1 for specific category only |
-| "scrape [technique_id]" | Run Phase 1 for single technique |
-| "generate prompts" / "phase 2" | Run Phase 2 for all techniques |
-| "prompt for [technique_id]" | Generate prompt for single technique |
-| "status" / "progress" | Show completion stats per category |
-| "list missing" | Show techniques without reference images |
-| "list ready" | Show techniques ready for prompt generation |
+| "phase 1" / "create folders" | Run Phase 1 for all techniques |
+| "phase 1 [category]" | Run Phase 1 for specific category |
+| "phase 2" / "generate prompts" | Run Phase 2 for all techniques |
+| "phase 2 [category]" | Run Phase 2 for specific category |
+| "status" | Show completion stats per category |
 
 ---
 
@@ -188,3 +162,4 @@ Use this to populate `[SIMILAR_TECHNIQUES]` in negative prompts:
 - Reference images are used as img2img input, prompts are secondary guidance
 - The minimalist vector style should look like technical manual illustrations
 - Approximately 215 techniques total across all categories
+- Image downloading to be handled separately (TBD)
