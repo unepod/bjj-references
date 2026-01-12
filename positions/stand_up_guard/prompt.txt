@@ -1,0 +1,17 @@
+# Technical Stand Up
+# Generated: 2026-01-12
+# Style: Minimalist Technical Vector Art
+
+## Prompt:
+Recreate this BJJ Technical Stand Up in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (`#2772b6`). Player rising from seated position with one hand posted on mat, opposite leg bent with foot flat, other leg extended, hip raised off ground, standing leg base strong. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (`#E0E0E0`). High contrast.
+
+## Negative Prompt:
+arrows, numbers, text, labels, annotations, sit up guard, wrestling stance, guard pull, shadows, gradients, shading, realistic, photorealistic, faces
+
+## Notes:
+- Hero (executing technique) = WHITE Gi
+- Opponent = BLUE Gi (#2772b6)
+- Background = Light grey (#E0E0E0)
+- Style: Thick black outlines, flat colors, geometric
+- View: High-angle isometric
+- No faces, labels, or annotations

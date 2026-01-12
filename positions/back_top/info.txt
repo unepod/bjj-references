@@ -1,0 +1,23 @@
+Technique: Back Control (Top/Attacker)
+ID: back_top
+Belt: White
+Category: Positions
+
+Search Queries Used:
+- "BJJ back control position reference image hooks seatbelt"
+- "back mount BJJ technique"
+- "rear mount BJJ position"
+
+Source URLs for Images:
+1. https://evolve-mma.com/blog/bjj-101-the-back-mount/
+2. https://evolve-mma.com/blog/a-beginners-guide-to-the-seat-belt-in-bjj/
+3. https://www.nagafighter.com/what-is-back-control-in-bjj/
+4. https://www.thebjjproject.com/backcontrol
+5. https://submissionsearcher.com/technique-type/back-control-variations/
+6. https://jiujitsulegacy.com/bjj-lifestyle/bjj-back-control/
+7. https://bjjmore.com/back-mount-bjj/
+8. https://pioneergrapplingacademy.com/back-takes-in-bjj-entries-hooks-retention
+
+Image Search URLs:
+- https://www.google.com/search?q=BJJ+back+control+hooks+seatbelt&tbm=isch
+- https://www.google.com/search?q=back+mount+BJJ+position&tbm=isch

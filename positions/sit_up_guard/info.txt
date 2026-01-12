@@ -1,0 +1,20 @@
+Technique: Sit Up Guard
+ID: sit_up_guard
+Belt: White
+Category: Positions
+
+Search Queries Used:
+- "BJJ sit up guard position"
+- "seated guard BJJ technique"
+- "Lachlan Giles sit up guard"
+
+Source URLs for Images:
+1. https://submeta.io/@lachlangiles/courses/sit-up-guard
+2. https://www.bjjmentalmodels.com/seated-vs-supine-guards
+3. http://www.grapplearts.com/a-glossary-of-guards-part-2-the-open-guard/
+4. https://jiujitsu.com/blogs/jiujitsu/bjj-guards
+5. https://martialboss.com/open-guard-bjj
+
+Image Search URLs:
+- https://www.google.com/search?q=BJJ+sit+up+guard+position&tbm=isch
+- https://www.google.com/search?q=seated+guard+BJJ+technique&tbm=isch

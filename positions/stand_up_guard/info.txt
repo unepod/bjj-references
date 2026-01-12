@@ -1,0 +1,18 @@
+Technique: Technical Stand Up
+ID: stand_up_guard
+Belt: White
+Category: Positions
+
+Search Queries Used:
+- "BJJ technical stand up"
+- "standing up from guard BJJ"
+- "base stand up BJJ technique"
+
+Source URLs for Images:
+1. https://www.grapplearts.com/base-posture-structure-3-important-concepts-bjj/
+2. https://bjjequipment.com/bjj-positions/
+3. https://jiujitsuthoughts.com/basic-bjj-positions-for-beginners/
+
+Image Search URLs:
+- https://www.google.com/search?q=BJJ+technical+stand+up&tbm=isch
+- https://www.google.com/search?q=technical+standup+jiu+jitsu&tbm=isch

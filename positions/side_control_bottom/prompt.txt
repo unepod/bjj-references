@@ -1,0 +1,17 @@
+# Side Control Escape
+# Generated: 2026-01-12
+# Style: Minimalist Technical Vector Art
+
+## Prompt:
+Recreate this BJJ Side Control Escape in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (`#2772b6`). Bottom player on back pinned under side control, near elbow framing against opponent's hip, far hand framing neck, hips shrimping away to create space for knee insertion. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (`#E0E0E0`). High contrast.
+
+## Negative Prompt:
+arrows, numbers, text, labels, annotations, mount escape, knee on belly escape, north south escape, shadows, gradients, shading, realistic, photorealistic, faces
+
+## Notes:
+- Hero (executing technique) = WHITE Gi
+- Opponent = BLUE Gi (#2772b6)
+- Background = Light grey (#E0E0E0)
+- Style: Thick black outlines, flat colors, geometric
+- View: High-angle isometric
+- No faces, labels, or annotations

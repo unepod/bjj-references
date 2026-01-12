@@ -1,0 +1,17 @@
+# Reverse De La Riva Guard
+# Generated: 2026-01-12
+# Style: Minimalist Technical Vector Art
+
+## Prompt:
+Recreate this BJJ Reverse De La Riva Guard in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (`#2772b6`). Bottom player with inside leg hooked behind opponent's lead leg from inside, hips inverted and angled, hand on belt or pants, ready to spin for berimbolo. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (`#E0E0E0`). High contrast.
+
+## Negative Prompt:
+arrows, numbers, text, labels, annotations, de la riva, kiss of dragon position, berimbolo, single leg x, shadows, gradients, shading, realistic, photorealistic, faces
+
+## Notes:
+- Hero (executing technique) = WHITE Gi
+- Opponent = BLUE Gi (#2772b6)
+- Background = Light grey (#E0E0E0)
+- Style: Thick black outlines, flat colors, geometric
+- View: High-angle isometric
+- No faces, labels, or annotations

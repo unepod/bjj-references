@@ -1,0 +1,17 @@
+# Side Control Top
+# Generated: 2026-01-12
+# Style: Minimalist Technical Vector Art
+
+## Prompt:
+Recreate this BJJ Side Control Top in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (`#2772b6`). Top player perpendicular across opponent's torso, chest-to-chest, crossface arm driving shoulder into opponent's jaw turning their head away, underhook arm threaded under far arm, hips low against ribs, knees tight. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (`#E0E0E0`). High contrast.
+
+## Negative Prompt:
+arrows, numbers, text, labels, annotations, mount, knee on belly, north south, scarf hold, shadows, gradients, shading, realistic, photorealistic, faces
+
+## Notes:
+- Hero (executing technique) = WHITE Gi
+- Opponent = BLUE Gi (#2772b6)
+- Background = Light grey (#E0E0E0)
+- Style: Thick black outlines, flat colors, geometric
+- View: High-angle isometric
+- No faces, labels, or annotations

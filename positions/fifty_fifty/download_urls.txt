@@ -1,0 +1,32 @@
+# Download URLs for: 50/50 Guard
+# Technique ID: fifty_fifty
+#
+# Instructions:
+# 1. Open each URL below
+# 2. Save 5-8 relevant images to this folder
+# 3. Rename files using this convention:
+#    01_photo_side_angle.jpg
+#    02_diagram_top_view.jpg
+#    03_photo_gi.jpg
+#    04_photo_nogi.jpg
+#    05_illustration.png
+
+=== Google Images ===
+https://www.google.com/search?q=50/50+Guard+BJJ+technique&tbm=isch
+https://www.google.com/search?q=50/50+Guard+jiu+jitsu+position&tbm=isch
+https://www.google.com/search?q=50/50+Guard+grappling+diagram&tbm=isch
+
+=== Bing Images ===
+https://www.bing.com/images/search?q=50/50+Guard+BJJ+technique
+
+=== BJJ Reference Sites ===
+https://www.bjj.university/
+https://evolve-mma.com/blog/
+https://www.grapplearts.com/
+https://bjjequipment.com/bjj-positions/
+https://submissionsearcher.com/
+https://www.bjjheroes.com/techniques/
+
+=== YouTube (for screenshot thumbnails) ===
+https://www.youtube.com/results?search_query=50/50+Guard+BJJ+tutorial
+

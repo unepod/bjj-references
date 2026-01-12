@@ -1,0 +1,19 @@
+Technique: Back Escape (Bottom/Defender)
+ID: back_bottom
+Belt: White
+Category: Positions
+
+Search Queries Used:
+- "BJJ back escape defense"
+- "escaping back mount BJJ"
+- "back control escape BJJ technique"
+
+Source URLs for Images:
+1. https://evolve-mma.com/blog/bjj-101-the-back-mount/
+2. https://www.nagafighter.com/what-is-back-control-in-bjj/
+3. https://simplebjj.com/class-2014-06-18-back-mount-defense-and-control/
+4. https://bjjmore.com/back-mount-bjj/
+
+Image Search URLs:
+- https://www.google.com/search?q=BJJ+back+escape+technique&tbm=isch
+- https://www.google.com/search?q=escaping+back+control+BJJ&tbm=isch

@@ -1,0 +1,17 @@
+# Half Guard Top
+# Generated: 2026-01-12
+# Style: Minimalist Technical Vector Art
+
+## Prompt:
+Recreate this BJJ Half Guard Top in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (`#2772b6`). Top player with one leg trapped between opponent's legs, crossface arm driving into opponent's jaw, underhook on far side, chest driving pressure while working to free leg. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (`#E0E0E0`). High contrast.
+
+## Negative Prompt:
+arrows, numbers, text, labels, annotations, side control, knee cut, smash pass position, shadows, gradients, shading, realistic, photorealistic, faces
+
+## Notes:
+- Hero (executing technique) = WHITE Gi
+- Opponent = BLUE Gi (#2772b6)
+- Background = Light grey (#E0E0E0)
+- Style: Thick black outlines, flat colors, geometric
+- View: High-angle isometric
+- No faces, labels, or annotations
