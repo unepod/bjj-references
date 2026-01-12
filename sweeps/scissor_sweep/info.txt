@@ -1,0 +1,10 @@
+Technique: Scissor Sweep
+ID: scissor_sweep
+Category: sweeps
+Position: Closed Guard
+Belt: White
+Gi Only: No
+
+Search queries used:
+- scissor sweep BJJ technique
+- scissor sweep closed guard

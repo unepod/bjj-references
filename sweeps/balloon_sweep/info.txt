@@ -1,0 +1,10 @@
+Technique: Balloon Sweep
+ID: balloon_sweep
+Category: sweeps
+Position: Open Guard
+Belt: Blue
+Gi Only: No
+
+Search queries used:
+- balloon sweep BJJ technique
+- balloon sweep overhead sweep

@@ -1,0 +1,10 @@
+Technique: Elevator Sweep
+ID: elevator_sweep
+Category: sweeps
+Position: Half Guard
+Belt: White
+Gi Only: No
+
+Search queries used:
+- elevator sweep BJJ technique
+- elevator sweep half guard

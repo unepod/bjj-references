@@ -1,0 +1,10 @@
+Technique: Stack Pass
+ID: stack_pass
+Category: passes
+Position: Closed Guard Top
+Belt: White
+Gi Only: No
+
+Search queries used:
+- stack pass BJJ technique
+- stack pass closed guard

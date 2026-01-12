@@ -1,0 +1,10 @@
+Technique: Armbar Defense
+ID: armbar_defense
+Category: escapes
+Position: Armbar Bottom
+Belt: White
+Gi Only: No
+
+Search queries used:
+- armbar defense BJJ technique
+- armbar escape defense

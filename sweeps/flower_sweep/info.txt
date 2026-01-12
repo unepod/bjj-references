@@ -1,0 +1,10 @@
+Technique: Flower Sweep
+ID: flower_sweep
+Category: sweeps
+Position: Closed Guard
+Belt: White
+Gi Only: No
+
+Search queries used:
+- flower sweep BJJ technique
+- pendulum sweep closed guard

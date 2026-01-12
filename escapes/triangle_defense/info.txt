@@ -1,0 +1,10 @@
+Technique: Triangle Defense
+ID: triangle_defense
+Category: escapes
+Position: Triangle Bottom
+Belt: White
+Gi Only: No
+
+Search queries used:
+- triangle defense BJJ technique
+- triangle choke escape defense

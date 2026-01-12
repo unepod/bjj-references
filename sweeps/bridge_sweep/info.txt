@@ -1,0 +1,10 @@
+Technique: Bridge Sweep
+ID: bridge_sweep
+Category: sweeps
+Position: Mount Bottom
+Belt: White
+Gi Only: No
+
+Search queries used:
+- bridge sweep BJJ technique
+- trap and roll mount escape

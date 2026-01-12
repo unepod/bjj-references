@@ -1,0 +1,10 @@
+Technique: Suplex
+ID: suplex
+Category: takedowns
+Position: Standing
+Belt: Blue
+Gi Only: No
+
+Search queries used:
+- suplex BJJ wrestling technique
+- suplex takedown grappling

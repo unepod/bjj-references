@@ -1,0 +1,10 @@
+Technique: Sickle Sweep
+ID: sickle_sweep
+Category: sweeps
+Position: Open Guard
+Belt: White
+Gi Only: No
+
+Search queries used:
+- sickle sweep BJJ technique
+- sickle sweep open guard
