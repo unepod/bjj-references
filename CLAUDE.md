@@ -94,15 +94,14 @@ User says: "phase 2", "generate prompts", or "write prompts"
 
 ### Task
 For each technique in `bjj_moves.md`:
-1. Research the technique from authoritative BJJ websites
-2. Generate a prompt using the template below
-3. Save to `./[category]/[ID]/prompt.txt`
-4. Compile all prompts into `./all_prompts.md`
+1. Generate a prompt using the template below
+2. Save to `./[category]/[ID]/prompt.txt`
+3. Compile all prompts into `./all_prompts.md`
 
 ### Prompt Template
 
 ```
-"Recreate this BJJ [NAME] in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). [BRIEF_DESCRIPTION]. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+"Recreate this BJJ [NAME] in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6), both with black belts. Maintain the exact same perpendicular body positioning, leg and arm placement as reference. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features, no haircuts, bald heads, no beards. Keep the "action" centered (hips/torso center ≈ canvas center), figures inside the canvas, not overflowing. Flat skin color (#D7A57A), thick black outline. Isolated on light grey background (#E0E0E0). High contrast."
 
 Negative_prompt: "arrows, numbers, text, labels, annotations, [SIMILAR_TECHNIQUES], shadows, gradients, shading, realistic, photorealistic, faces"
 ```
@@ -112,7 +111,6 @@ Negative_prompt: "arrows, numbers, text, labels, annotations, [SIMILAR_TECHNIQUE
 | Variable | Description |
 |----------|-------------|
 | `[NAME]` | Human-readable name from bjj_moves.md |
-| `[BRIEF_DESCRIPTION]` | 1-2 sentences describing key body positioning from web research. Include: relative body angles, limb positions, grips if gi technique |
 | `[SIMILAR_TECHNIQUES]` | 3-5 commonly confused positions to exclude |
 
 ### Strict Rules
