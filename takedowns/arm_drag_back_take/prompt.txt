@@ -1,0 +1,3 @@
+"Recreate this BJJ Arm Drag to Back Take in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero gripping opponent's wrist and tricep, yanking arm across body. Hero uses drag momentum to spin behind opponent, reaching for seatbelt control. Quick transition to the back. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, collar drag, duck under, go behind, russian tie, shadows, gradients, shading, realistic, photorealistic, faces"

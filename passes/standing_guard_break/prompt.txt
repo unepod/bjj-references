@@ -1,0 +1,3 @@
+"Recreate this BJJ Standing Guard Break in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero standing up in opponent's closed guard, hands controlling opponent's hips or belt. Hero postures tall with good base, pressuring opponent's guard to force it open. Fundamental guard breaking posture. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, guard pass, toreando, closed guard, stack, shadows, gradients, shading, realistic, photorealistic, faces"

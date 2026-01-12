@@ -1,0 +1,3 @@
+"Recreate this BJJ Body Lock Pass in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero locked around opponent's waist with gable grip body lock. Hero uses body lock control to pin opponent while methodically working around their guard. Chest-to-chest pressure while circling to side control. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, double under, over under, stack, wrestling, shadows, gradients, shading, realistic, photorealistic, faces"

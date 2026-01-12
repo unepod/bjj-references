@@ -1,0 +1,3 @@
+"Recreate this BJJ Peruvian Necktie in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero from front headlock, arm wrapped around opponent's neck. Hero threads leg over opponent's back, stepping over with foot hooking opponent's far hip. Hero grips own shin while driving hips down and pulling up on neck, creating crushing pressure. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, japanese necktie, guillotine, darce, anaconda, shadows, gradients, shading, realistic, photorealistic, faces"

@@ -1,0 +1,3 @@
+"Recreate this BJJ Double Leg Takedown in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero shoots in low, head to the side of opponent's hip, arms wrapped around both legs at thigh level. Hero drives forward with legs while lifting and turning opponent, taking them to the mat. Classic penetration step entry. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, single leg, high crotch, blast double, suplex, shadows, gradients, shading, realistic, photorealistic, faces"

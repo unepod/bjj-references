@@ -1,0 +1,3 @@
+"Recreate this BJJ Tornado Sweep in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero from half guard, inverting and spinning underneath opponent like a tornado. Hero uses rotational momentum to off-balance and sweep opponent, typically attacking with omoplata or back take threat. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, berimbolo, inversion, half guard, rolling sweep, shadows, gradients, shading, realistic, photorealistic, faces"

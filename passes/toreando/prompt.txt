@@ -1,0 +1,3 @@
+"Recreate this BJJ Toreando Pass in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero standing, gripping opponent's pants at knees or ankles. Hero pushes opponent's legs to one side like a bullfighter, stepping around to opposite side. Hero uses speed and redirection to pass guard. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, x pass, leg drag, bullfighter, standing pass, shadows, gradients, shading, realistic, photorealistic, faces"

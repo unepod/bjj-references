@@ -1,0 +1,3 @@
+"Recreate this BJJ Back Escape Shoulder Walk in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero escaping back control by walking shoulders toward the mat, sliding down opponent's body. Hero walks shoulders to pin opponent's back to mat, escaping to side control. Shoulder walking technique. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, turning escape, back take, RNC defense, hip escape, shadows, gradients, shading, realistic, photorealistic, faces"

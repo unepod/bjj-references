@@ -1,0 +1,3 @@
+"Recreate this BJJ Leg Lock Defense in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero caught in leg entanglement, boot/foot turned toward opponent to relieve heel hook pressure. Hero fights to clear knee line and extract leg from entanglement. Heel hook defensive positioning. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, heel hook finish, leg entanglement, knee line, ashi garami, shadows, gradients, shading, realistic, photorealistic, faces"

@@ -1,0 +1,3 @@
+"Recreate this BJJ Foot Wedge Pass in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero using foot as wedge against opponent's hip or thigh while passing. Hero plants foot and uses it as anchor point to pivot and clear opponent's guard. Creates strong base while transitioning. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, knee cut, backstep, leg drag, hip switch, shadows, gradients, shading, realistic, photorealistic, faces"

@@ -1,0 +1,3 @@
+"Recreate this BJJ Can Opener in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero in opponent's closed guard, clasping hands behind opponent's head. Hero drives elbows down toward mat while pulling opponent's head toward their chest, creating pressure on neck and spine. Hero postures up while maintaining grip to intensify the crank. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, twister, neck crank, guillotine, stack pass, shadows, gradients, shading, realistic, photorealistic, faces"

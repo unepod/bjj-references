@@ -1,0 +1,3 @@
+"Recreate this BJJ Arm Triangle (Head and Arm Choke) in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero from side control, wrapping arm around opponent's head and trapping their near arm against their own neck. Hero's hands clasped together, squeezing elbows tight. Hero walks hips toward opponent's head, sprawling weight down to finish the choke. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, triangle choke, darce, anaconda, guillotine, shadows, gradients, shading, realistic, photorealistic, faces"

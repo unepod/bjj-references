@@ -1,0 +1,3 @@
+"Recreate this BJJ Collar Drag Choke in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero behind opponent with back control, gripping opponent's collar and dragging it across their neck. Hero feeds collar to other hand, creating tight loop around opponent's throat. Hero pulls both ends of collar in opposite directions to finish choke. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, bow and arrow, cross choke, rear naked choke, sliding collar, shadows, gradients, shading, realistic, photorealistic, faces"

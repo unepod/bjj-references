@@ -1,0 +1,3 @@
+"Recreate this BJJ Chair Sit Back Take in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero behind opponent on turtle, sitting back like sitting in a chair. Hero pulls opponent into lap while establishing hooks and seatbelt control. Uses sitting motion to secure full back mount position. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, seatbelt, turtle, spiral ride, rolling back take, shadows, gradients, shading, realistic, photorealistic, faces"

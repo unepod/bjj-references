@@ -1,0 +1,3 @@
+"Recreate this BJJ Side Control Escape in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero trapped under side control, creating frames with arms against opponent's neck and hip. Hero shrimps hips away while using frames to create space, working to recover guard. Fundamental escape mechanics. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, mount escape, guard recovery, bridge, shrimp, shadows, gradients, shading, realistic, photorealistic, faces"

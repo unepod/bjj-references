@@ -1,0 +1,3 @@
+"Recreate this BJJ Kimura from North South in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero in north-south position on top, isolating opponent's arm with figure-four grip. Hero threads arm under opponent's elbow, grabs own wrist. Hero uses body position and leverage to rotate opponent's arm behind their back, attacking shoulder. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, americana, armbar, wristlock, side control kimura, shadows, gradients, shading, realistic, photorealistic, faces"

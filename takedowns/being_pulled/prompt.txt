@@ -1,0 +1,3 @@
+"Recreate this BJJ Guard Pull Defense in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero responding to opponent's guard pull attempt, maintaining standing posture. Hero stuffs the pull while beginning to pass, not allowing opponent to establish guard. Counter to guard pulling. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, guard pull, toreando, pass, standing base, shadows, gradients, shading, realistic, photorealistic, faces"

@@ -1,0 +1,3 @@
+"Recreate this BJJ Flower Sweep in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero on back in closed guard, controlling opponent's same-side sleeve and opposite collar. Hero opens guard, hooking one foot on opponent's hip while other leg swings up and over. Hero pulls sleeve while elevating with leg, spinning opponent over like a flower petal. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, pendulum sweep, scissor sweep, hip bump, mount, shadows, gradients, shading, realistic, photorealistic, faces"

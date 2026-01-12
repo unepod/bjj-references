@@ -1,0 +1,3 @@
+"Recreate this BJJ Butterfly Sweep in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero seated with butterfly hooks (feet inside opponent's thighs), controlling opponent's arm and collar. Hero falls to side while elevating opponent with hook, pulling arm and lifting with leg to sweep opponent over. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, elevator sweep, hook sweep, single leg x, half guard, shadows, gradients, shading, realistic, photorealistic, faces"

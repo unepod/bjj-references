@@ -1,0 +1,3 @@
+"Recreate this BJJ Side Control Frame Escape in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero under side control, establishing strong frames with forearm on opponent's neck and hand on hip. Hero uses frames to create space and prevent crushing pressure while escaping. Emphasis on proper frame positioning. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, shrimp escape, ghost escape, elbow escape, underhook, shadows, gradients, shading, realistic, photorealistic, faces"

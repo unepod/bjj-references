@@ -1,0 +1,3 @@
+"Recreate this BJJ Ghost Escape from Side Control in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero under side control, sneaking arm through and sliding body underneath opponent. Hero threads through the space like a ghost, emerging on the other side or taking the back. Slick technical escape. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, frame escape, shrimp, granby, back take, shadows, gradients, shading, realistic, photorealistic, faces"

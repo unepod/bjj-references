@@ -1,0 +1,3 @@
+"Recreate this BJJ Tai Otoshi (Body Drop) in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero turning and extending leg as obstacle in front of opponent's leg. Hero pulls opponent forward over extended leg, using it as fulcrum. Hand technique throw without hip contact. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, seoi nage, trip, osoto gari, foot sweep, shadows, gradients, shading, realistic, photorealistic, faces"

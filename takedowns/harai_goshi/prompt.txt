@@ -1,0 +1,3 @@
+"Recreate this BJJ Harai Goshi (Sweeping Hip Throw) in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero turning in with hip throw entry, sweeping opponent's leg with back of thigh. Hero combines hip throw mechanics with leg sweep action. Sweeping leg clears opponent's support. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, o goshi, uchi mata, hane goshi, hip throw, shadows, gradients, shading, realistic, photorealistic, faces"

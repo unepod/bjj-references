@@ -1,0 +1,3 @@
+"Recreate this BJJ Calf Slicer in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero with shin or forearm wedged behind opponent's knee joint. Hero controls opponent's foot, pulling it toward opponent's buttocks while pressing shin/forearm into calf, creating crushing pressure on the muscle. Hero uses body weight to amplify the slice. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, knee bar, heel hook, toe hold, bicep slicer, shadows, gradients, shading, realistic, photorealistic, faces"

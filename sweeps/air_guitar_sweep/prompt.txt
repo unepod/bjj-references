@@ -1,0 +1,3 @@
+"Recreate this BJJ Air Guitar Sweep in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero from DLR or spider guard, gripping opponent's ankle while extending other leg into opponent. Hero mimics air guitar strumming motion with the sweep, using leg leverage and ankle grip to topple opponent. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, DLR sweep, spider sweep, ankle pick, tripod, shadows, gradients, shading, realistic, photorealistic, faces"

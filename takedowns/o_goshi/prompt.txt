@@ -1,0 +1,3 @@
+"Recreate this BJJ O Goshi (Major Hip Throw) in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero with arm around opponent's waist, hip positioned in front of opponent's hip. Hero bends knees, loads opponent onto hip, and rotates to throw. Classic major hip throw with wraparound grip. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, koshi guruma, harai goshi, uki goshi, hip toss, shadows, gradients, shading, realistic, photorealistic, faces"

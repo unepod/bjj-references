@@ -1,0 +1,3 @@
+"Recreate this BJJ High Crotch Takedown in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero shooting deep with head inside, arm reaching high between opponent's legs to grip inner thigh. Hero lifts and turns, using high crotch position to dump opponent. Penetration step with high inside control. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, single leg, double leg, fireman's carry, duck under, shadows, gradients, shading, realistic, photorealistic, faces"

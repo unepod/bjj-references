@@ -1,0 +1,3 @@
+"Recreate this BJJ Granby Roll in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero rolling over shoulder in inverted motion, escaping or transitioning position. Hero tucks head and rolls diagonally over shoulder, using momentum to create angles or escape. Wrestling-style inverting roll. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, inversion, forward roll, shoulder roll, berimbolo, shadows, gradients, shading, realistic, photorealistic, faces"

@@ -1,0 +1,3 @@
+"Recreate this BJJ Elevator Sweep in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero in half guard bottom, underhooking opponent's far leg. Hero places foot on opponent's hip as an elevator, lifting while bridging and rolling opponent over. Hero uses underhook and elevator to flip opponent to their back. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, butterfly sweep, old school, deep half, lockdown, shadows, gradients, shading, realistic, photorealistic, faces"

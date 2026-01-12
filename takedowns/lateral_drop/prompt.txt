@@ -1,0 +1,3 @@
+"Recreate this BJJ Lateral Drop in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero with body lock or over-under grip, arching backward and to the side. Hero throws opponent laterally using explosive hip thrust and arch. High amplitude wrestling throw. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, suplex, hip throw, lateral, mat return, shadows, gradients, shading, realistic, photorealistic, faces"

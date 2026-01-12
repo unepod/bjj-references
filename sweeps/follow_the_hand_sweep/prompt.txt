@@ -1,0 +1,3 @@
+"Recreate this BJJ Follow the Hand Sweep in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero in open guard, controlling opponent's wrist. As opponent posts hand on mat, hero follows the hand placement, sweeping in that direction. Hero uses opponent's own posting against them. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, butterfly, scissor, arm drag, wrist control, shadows, gradients, shading, realistic, photorealistic, faces"

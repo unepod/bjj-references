@@ -1,0 +1,3 @@
+"Recreate this BJJ Ankle Pick in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero grabbing opponent's ankle while pushing their shoulder or head to off-balance. Hero level changes and picks ankle while creating forward momentum. Quick snatch takedown. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, low single, knee tap, snap down, foot sweep, shadows, gradients, shading, realistic, photorealistic, faces"

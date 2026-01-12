@@ -1,0 +1,3 @@
+"Recreate this BJJ Toe Hold in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero controlling opponent's leg, gripping around opponent's foot with figure-four configuration. One hand cups toes, other arm wraps around ankle grabbing own wrist. Hero twists foot inward while pushing down on toes, attacking ankle ligaments. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, ankle lock, heel hook, knee bar, calf slicer, shadows, gradients, shading, realistic, photorealistic, faces"

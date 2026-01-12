@@ -1,0 +1,3 @@
+"Recreate this BJJ Gift Wrap in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero in mount or back control, trapping opponent's arm across their own neck. Hero grips opponent's wrist, pulling arm across throat while controlling from behind. Sets up chokes or back transitions. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, mount control, arm trap, back take, twister, shadows, gradients, shading, realistic, photorealistic, faces"

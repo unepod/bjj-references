@@ -1,0 +1,3 @@
+"Recreate this BJJ Hip Escape (Shrimp) in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero on back, driving off feet to escape hips away from opponent. Hero frames with arms while scooting hips backward in shrimping motion. Fundamental BJJ movement for creating space. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, bridge, upa, guard recovery, escape, shadows, gradients, shading, realistic, photorealistic, faces"

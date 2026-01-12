@@ -1,0 +1,3 @@
+"Recreate this BJJ Brabo Choke in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero from half guard or side control top, threading arm around opponent's head and feeding opponent's own lapel around their neck. Hero grips the fed lapel with other hand, squeezing like a darce choke but using the gi lapel for leverage. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, darce, anaconda, arm triangle, loop choke, shadows, gradients, shading, realistic, photorealistic, faces"

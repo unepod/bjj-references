@@ -1,0 +1,3 @@
+"Recreate this BJJ Mount Escape Elbow Escape in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero under mount, using elbow to create frame against opponent's knee. Hero shrimps hips out while using elbow frame to push opponent's leg, recovering half guard or full guard. Technical hip escape from mount. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, bridge escape, upa, trap and roll, knee elbow, shadows, gradients, shading, realistic, photorealistic, faces"

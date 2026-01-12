@@ -1,0 +1,3 @@
+"Recreate this BJJ Sode Tsurikomi Goshi (Sleeve Pulling Hip Throw) in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero gripping both sleeves, turning in for hip throw. Hero uses sleeve grips to load and throw opponent over hip. Double sleeve grip hip throw variation. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, seoi nage, o goshi, sleeve throw, drop throw, shadows, gradients, shading, realistic, photorealistic, faces"

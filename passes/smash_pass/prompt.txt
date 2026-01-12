@@ -1,0 +1,3 @@
+"Recreate this BJJ Smash Pass in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero in half guard top, driving shoulder into opponent's face while flattening them. Hero smashes opponent's knee to mat with hip pressure, making space to extract trapped leg. Heavy pressure passing with cross-face and underhook. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, knee cut, pressure pass, half guard, over under, shadows, gradients, shading, realistic, photorealistic, faces"

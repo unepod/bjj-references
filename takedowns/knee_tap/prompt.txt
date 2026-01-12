@@ -1,0 +1,3 @@
+"Recreate this BJJ Knee Tap in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6). Hero tapping or pushing behind opponent's knee while driving them laterally. Hero uses collar tie or head control with free hand. Knee buckle causes opponent to fall. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (#E0E0E0). High contrast."
+
+Negative_prompt: "arrows, numbers, text, labels, annotations, ankle pick, inside trip, knee pick, snap down, shadows, gradients, shading, realistic, photorealistic, faces"
