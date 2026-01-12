@@ -1,17 +1,3 @@
-# The Saddle
-# Generated: 2026-01-12
-# Style: Minimalist Technical Vector Art
+"Recreate this BJJ Saddle in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (#2772b6), both with black belts. Maintain the exact same perpendicular body positioning, leg and arm placement as reference. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features, no haircuts, bald heads, no beards. Keep the "action" centered (hips/torso center ≈ canvas center), figures inside the canvas, not overflowing. Flat skin color (#D7A57A), thick black outline. Isolated on light grey background (#E0E0E0). High contrast."
 
-## Prompt:
-Recreate this BJJ The Saddle in minimalist technical vector art style. Hero (executing technique) in white Gi, opponent in blue Gi (`#2772b6`). Dominant leg control with both legs wrapped around one of opponent's legs from opposite sides, one leg over, one under, full hip control exposing both heel hook angles. Thick black outlines, flat solid colors, clean geometric shapes. High-angle isometric view. Faceless figures, no facial features. Isolated on light grey background (`#E0E0E0`). High contrast.
-
-## Negative Prompt:
-arrows, numbers, text, labels, annotations, inside sankaku, 411, outside ashi, cross ashi, shadows, gradients, shading, realistic, photorealistic, faces
-
-## Notes:
-- Hero (executing technique) = WHITE Gi
-- Opponent = BLUE Gi (#2772b6)
-- Background = Light grey (#E0E0E0)
-- Style: Thick black outlines, flat colors, geometric
-- View: High-angle isometric
-- No faces, labels, or annotations
+Negative_prompt: "arrows, numbers, text, labels, annotations, leg entanglement, heel hook, x guard, shadows, gradients, shading, realistic, photorealistic, faces"
