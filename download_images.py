@@ -1,259 +1,287 @@
 #!/usr/bin/env python3
 """
-BJJ Reference Images Downloader
-
-This script downloads reference images for BJJ techniques from various sources.
-
-Prerequisites:
-    pip install requests beautifulsoup4 Pillow icrawler
-
-Usage:
-    python download_images.py                    # Download all positions
-    python download_images.py --technique closed_guard_bottom
-    python download_images.py --belt white       # Only white belt techniques
+Phase 3: Download reference images for BJJ techniques
+Reads download_urls.txt files and downloads images from reference sites.
 """
 
 import os
+import re
 import sys
-import argparse
-import json
+import time
+import urllib.request
+import urllib.parse
 from pathlib import Path
-from typing import Dict, List, Optional
+from html.parser import HTMLParser
+import ssl
 
-# Try to import optional dependencies
-try:
-    from icrawler.builtin import GoogleImageCrawler, BingImageCrawler
-    HAS_ICRAWLER = True
-except ImportError:
-    HAS_ICRAWLER = False
-    print("Note: Install 'icrawler' for automatic image downloading: pip install icrawler")
+# Create SSL context that doesn't verify certificates (for some sites)
+ssl_context = ssl.create_default_context()
+ssl_context.check_hostname = False
+ssl_context.verify_mode = ssl.CERT_NONE
 
-try:
-    import requests
-    HAS_REQUESTS = True
-except ImportError:
-    HAS_REQUESTS = False
+class ImageExtractor(HTMLParser):
+    """Extract image URLs from HTML."""
+    def __init__(self, base_url):
+        super().__init__()
+        self.base_url = base_url
+        self.images = []
 
-BASE_DIR = Path.home() / "bjj_references"
+    def handle_starttag(self, tag, attrs):
+        if tag == 'img':
+            attrs_dict = dict(attrs)
+            src = attrs_dict.get('src') or attrs_dict.get('data-src') or attrs_dict.get('data-lazy-src')
+            if src:
+                # Convert relative URLs to absolute
+                if src.startswith('//'):
+                    src = 'https:' + src
+                elif src.startswith('/'):
+                    parsed = urllib.parse.urlparse(self.base_url)
+                    src = f"{parsed.scheme}://{parsed.netloc}{src}"
+                elif not src.startswith('http'):
+                    src = urllib.parse.urljoin(self.base_url, src)
+                self.images.append(src)
 
-# Technique definitions
-POSITIONS = {
-    "white": {
-        "standing_position": "Standing Position",
-        "closed_guard_bottom": "Closed Guard Bottom",
-        "closed_guard_top": "Closed Guard Top",
-        "open_guard_bottom": "Open Guard Bottom",
-        "open_guard_top": "Open Guard Top",
-        "sit_up_guard": "Sit Up Guard",
-        "stand_up_guard": "Technical Stand Up",
-        "half_guard_bottom": "Half Guard Bottom",
-        "half_guard_top": "Half Guard Top",
-        "butterfly_guard_bottom": "Butterfly Guard",
-        "butterfly_guard_top": "Passing Butterfly Guard",
-        "side_control_top": "Side Control Top",
-        "side_control_bottom": "Side Control Bottom",
-        "mount_top": "Mount Top",
-        "mount_bottom": "Mount Bottom",
-        "back_top": "Back Control",
-        "back_bottom": "Back Escape",
-        "knee_on_belly_bottom": "Knee on Belly Escape",
-        "turtle_bottom": "Turtle Defense",
-    },
-    "blue": {
-        "deep_half_bottom": "Deep Half Guard",
-        "deep_half_top": "Countering Deep Half",
-        "dog_fight": "Dog Fight Position",
-        "x_guard_bottom": "X Guard",
-        "x_guard_top": "Passing X Guard",
-        "single_leg_x_bottom": "Single Leg X Guard",
-        "single_leg_x_top": "Passing Single Leg X",
-        "de_la_riva_bottom": "De La Riva Guard",
-        "de_la_riva_top": "Passing De La Riva",
-        "spider_guard_bottom": "Spider Guard",
-        "spider_guard_top": "Passing Spider Guard",
-        "collar_sleeve_bottom": "Collar Sleeve Guard",
-        "collar_sleeve_top": "Passing Collar Sleeve",
-        "lasso_guard_bottom": "Lasso Guard",
-        "lasso_guard_top": "Passing Lasso Guard",
-        "rdlr_bottom": "Reverse De La Riva Guard",
-        "rdlr_top": "Passing Reverse De La Riva",
-        "high_mount_top": "High Mount",
-        "s_mount_top": "S-Mount",
-        "knee_on_belly_top": "Knee on Belly",
-        "north_south_top": "North South Position",
-        "north_south_bottom": "North South Escape",
-        "turtle_top": "Attacking Turtle",
-        "fifty_fifty": "50/50 Guard",
-        "ashi_garami": "Ashi Garami",
-        "outside_ashi": "Outside Ashi",
-        "inside_sankaku": "Inside Sankaku",
-        "saddle": "The Saddle",
-        "crucifix_top": "Crucifix Position",
-        "crucifix_bottom": "Crucifix Escape",
+def get_headers():
+    """Return headers to mimic a browser request."""
+    return {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5',
     }
-}
 
-def download_with_icrawler(technique_id: str, technique_name: str, output_dir: Path, max_images: int = 8):
-    """Download images using icrawler library."""
-    if not HAS_ICRAWLER:
-        print(f"  Skipping icrawler download (not installed)")
-        return
+def fetch_page(url, timeout=15):
+    """Fetch a webpage and return its HTML content."""
+    try:
+        req = urllib.request.Request(url, headers=get_headers())
+        with urllib.request.urlopen(req, timeout=timeout, context=ssl_context) as response:
+            return response.read().decode('utf-8', errors='ignore')
+    except Exception as e:
+        print(f"    Error fetching {url}: {e}")
+        return None
 
-    queries = [
-        f"{technique_name} BJJ technique",
-        f"{technique_name} jiu jitsu position",
-        f"{technique_name} grappling",
+def extract_images_from_html(html, base_url):
+    """Extract image URLs from HTML content."""
+    parser = ImageExtractor(base_url)
+    try:
+        parser.feed(html)
+    except:
+        pass
+    return parser.images
+
+def filter_good_images(image_urls, technique_name):
+    """Filter images to find relevant BJJ technique images."""
+    good_images = []
+    technique_lower = technique_name.lower().replace('_', ' ').replace('-', ' ')
+
+    # Keywords to avoid
+    negative_keywords = ['logo', 'icon', 'avatar', 'banner', 'ad', 'advertisement',
+                        'facebook', 'twitter', 'instagram', 'pinterest', 'share',
+                        'arrow', 'button', 'menu', 'nav', 'footer', 'header',
+                        'gravatar', 'emoji', 'smiley', 'pixel', '1x1', 'spacer',
+                        'spinner', 'loading', 'placeholder']
+
+    for url in image_urls:
+        url_lower = url.lower()
+
+        # Skip small images and icons
+        if any(neg in url_lower for neg in negative_keywords):
+            continue
+
+        # Skip data URLs and SVGs
+        if url.startswith('data:') or url.endswith('.svg'):
+            continue
+
+        # Skip very short URLs (likely icons)
+        if len(url) < 30:
+            continue
+
+        # Check for image extensions
+        if not any(ext in url_lower for ext in ['.jpg', '.jpeg', '.png', '.webp', '.gif']):
+            # Some URLs don't have extensions but are images
+            if 'image' not in url_lower and 'photo' not in url_lower:
+                continue
+
+        # Prefer larger images (URLs often contain size info)
+        size_match = re.search(r'(\d+)x(\d+)', url)
+        if size_match:
+            w, h = int(size_match.group(1)), int(size_match.group(2))
+            if w < 200 or h < 200:
+                continue
+
+        good_images.append(url)
+
+    return good_images
+
+def download_image(url, filepath, timeout=20):
+    """Download an image to the specified filepath."""
+    try:
+        req = urllib.request.Request(url, headers=get_headers())
+        with urllib.request.urlopen(req, timeout=timeout, context=ssl_context) as response:
+            content = response.read()
+
+            # Verify it's actually an image (check magic bytes)
+            if content[:2] == b'\xff\xd8':  # JPEG
+                ext = '.jpg'
+            elif content[:8] == b'\x89PNG\r\n\x1a\n':  # PNG
+                ext = '.png'
+            elif content[:6] in (b'GIF87a', b'GIF89a'):  # GIF
+                ext = '.gif'
+            elif content[:4] == b'RIFF' and content[8:12] == b'WEBP':  # WebP
+                ext = '.webp'
+            else:
+                # Try to save anyway
+                ext = os.path.splitext(urllib.parse.urlparse(url).path)[1] or '.jpg'
+
+            # Update filepath with correct extension
+            filepath = os.path.splitext(filepath)[0] + ext
+
+            with open(filepath, 'wb') as f:
+                f.write(content)
+
+            # Check file size (skip if too small - likely an icon)
+            if os.path.getsize(filepath) < 5000:  # Less than 5KB
+                os.remove(filepath)
+                return None
+
+            return filepath
+    except Exception as e:
+        print(f"    Error downloading {url}: {e}")
+        return None
+
+def is_search_url(url):
+    """Check if URL is a search engine URL (skip these)."""
+    search_patterns = [
+        'google.com/search',
+        'bing.com/images',
+        'youtube.com/results',
+        'duckduckgo.com',
     ]
+    return any(pattern in url.lower() for pattern in search_patterns)
 
-    storage_dir = str(output_dir)
-    images_per_query = max_images // len(queries)
+def is_reference_site(url):
+    """Check if URL is from a known BJJ reference site."""
+    reference_domains = [
+        'bjjheroes.com',
+        'grapplearts.com',
+        'evolve-mma.com',
+        'bjjfanatics.com',
+        'submissionsearcher.com',
+        'bjj.university',
+        'bjjequipment.com',
+        'wikipedia.org',
+        'wikimedia.org',
+        'infighting.ca',
+        'bjjsportswear.com',
+        'bjjgraph.org',
+    ]
+    return any(domain in url.lower() for domain in reference_domains)
 
-    for i, query in enumerate(queries):
-        print(f"  Searching: {query}")
-        try:
-            # Google crawler
-            google_crawler = GoogleImageCrawler(
-                storage={'root_dir': storage_dir},
-                feeder_threads=1,
-                parser_threads=1,
-                downloader_threads=2
-            )
-            google_crawler.crawl(
-                keyword=query,
-                max_num=images_per_query,
-                min_size=(200, 200),
-                file_idx_offset=i * images_per_query
-            )
-        except Exception as e:
-            print(f"  Warning: Google crawl failed: {e}")
+def process_technique_folder(folder_path):
+    """Process a single technique folder and download images."""
+    urls_file = os.path.join(folder_path, 'download_urls.txt')
+    images_dir = os.path.join(folder_path, 'images')
 
-        try:
-            # Bing as backup
-            bing_crawler = BingImageCrawler(
-                storage={'root_dir': storage_dir},
-                feeder_threads=1,
-                parser_threads=1,
-                downloader_threads=2
-            )
-            bing_crawler.crawl(
-                keyword=query,
-                max_num=images_per_query // 2,
-                min_size=(200, 200),
-                file_idx_offset='bing'
-            )
-        except Exception as e:
-            print(f"  Warning: Bing crawl failed: {e}")
+    if not os.path.exists(urls_file):
+        return 0
 
+    # Check if images already downloaded
+    if os.path.exists(images_dir) and len(os.listdir(images_dir)) >= 3:
+        return len(os.listdir(images_dir))
 
-def create_download_urls_file(technique_id: str, technique_name: str, output_dir: Path):
-    """Create a file with URLs for manual downloading."""
-    urls_file = output_dir / "download_urls.txt"
+    # Create images directory
+    os.makedirs(images_dir, exist_ok=True)
 
-    search_term = technique_name.replace(" ", "+")
+    technique_name = os.path.basename(folder_path)
+    print(f"\nProcessing: {technique_name}")
 
-    content = f"""# Download URLs for: {technique_name}
-# Technique ID: {technique_id}
-#
-# Instructions:
-# 1. Open each URL below
-# 2. Save 5-8 relevant images to this folder
-# 3. Rename files using this convention:
-#    01_photo_side_angle.jpg
-#    02_diagram_top_view.jpg
-#    03_photo_gi.jpg
-#    04_photo_nogi.jpg
-#    05_illustration.png
+    # Read URLs
+    with open(urls_file, 'r') as f:
+        content = f.read()
 
-=== Google Images ===
-https://www.google.com/search?q={search_term}+BJJ+technique&tbm=isch
-https://www.google.com/search?q={search_term}+jiu+jitsu+position&tbm=isch
-https://www.google.com/search?q={search_term}+grappling+diagram&tbm=isch
+    # Extract URLs (skip comments and empty lines)
+    urls = []
+    for line in content.split('\n'):
+        line = line.strip()
+        if line and not line.startswith('#') and not line.startswith('==='):
+            if line.startswith('http'):
+                urls.append(line)
 
-=== Bing Images ===
-https://www.bing.com/images/search?q={search_term}+BJJ+technique
+    # Collect all potential images
+    all_images = []
 
-=== BJJ Reference Sites ===
-https://www.bjj.university/
-https://evolve-mma.com/blog/
-https://www.grapplearts.com/
-https://bjjequipment.com/bjj-positions/
-https://submissionsearcher.com/
-https://www.bjjheroes.com/techniques/
+    for url in urls:
+        # Skip search engine URLs
+        if is_search_url(url):
+            continue
 
-=== YouTube (for screenshot thumbnails) ===
-https://www.youtube.com/results?search_query={search_term}+BJJ+tutorial
+        # Only process reference sites
+        if not is_reference_site(url):
+            continue
 
-"""
+        print(f"  Fetching: {url[:60]}...")
+        html = fetch_page(url)
+        if html:
+            images = extract_images_from_html(html, url)
+            filtered = filter_good_images(images, technique_name)
+            all_images.extend(filtered)
+            time.sleep(0.5)  # Be polite to servers
 
-    with open(urls_file, 'w') as f:
-        f.write(content)
+    # Remove duplicates while preserving order
+    seen = set()
+    unique_images = []
+    for img in all_images:
+        if img not in seen:
+            seen.add(img)
+            unique_images.append(img)
 
-    print(f"  Created: {urls_file}")
+    # Download up to 5 images
+    downloaded = 0
+    for i, img_url in enumerate(unique_images[:10]):  # Try up to 10, keep 5
+        if downloaded >= 5:
+            break
 
+        filepath = os.path.join(images_dir, f"{downloaded + 1:02d}.jpg")
+        print(f"  Downloading: {img_url[:60]}...")
+        result = download_image(img_url, filepath)
+        if result:
+            downloaded += 1
+            print(f"    Saved: {os.path.basename(result)}")
+        time.sleep(0.3)
 
-def process_technique(category: str, technique_id: str, technique_name: str, belt: str, auto_download: bool = False):
-    """Process a single technique - create folder and download/create URLs."""
-    output_dir = BASE_DIR / category / technique_id
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    print(f"\n[{belt.upper()}] {technique_name} ({technique_id})")
-
-    # Create download URLs file
-    create_download_urls_file(technique_id, technique_name, output_dir)
-
-    # Auto-download if requested and icrawler available
-    if auto_download and HAS_ICRAWLER:
-        print("  Attempting automatic download...")
-        download_with_icrawler(technique_id, technique_name, output_dir)
-
+    print(f"  Downloaded {downloaded} images")
+    return downloaded
 
 def main():
-    parser = argparse.ArgumentParser(description="Download BJJ reference images")
-    parser.add_argument("--technique", "-t", help="Specific technique ID to download")
-    parser.add_argument("--belt", "-b", choices=["white", "blue", "all"], default="all",
-                        help="Belt level to download")
-    parser.add_argument("--category", "-c", default="positions",
-                        help="Category (positions, submissions, sweeps, passes, takedowns, escapes)")
-    parser.add_argument("--auto", "-a", action="store_true",
-                        help="Automatically download images (requires icrawler)")
-    args = parser.parse_args()
+    """Main function to process all technique folders."""
+    base_dir = Path(__file__).parent
 
-    print("=" * 50)
-    print("BJJ Reference Image Downloader")
-    print("=" * 50)
+    categories = ['positions', 'submissions', 'sweeps', 'passes', 'takedowns', 'escapes', 'transitions']
 
-    if args.technique:
-        # Download specific technique
-        for belt, techniques in POSITIONS.items():
-            if args.technique in techniques:
-                process_technique(args.category, args.technique, techniques[args.technique], belt, args.auto)
-                return
-        print(f"Unknown technique: {args.technique}")
-        sys.exit(1)
-    else:
-        # Download all techniques for specified belt level
-        belts_to_process = ["white", "blue"] if args.belt == "all" else [args.belt]
+    # Allow filtering by category from command line
+    if len(sys.argv) > 1:
+        categories = [c for c in categories if c in sys.argv[1:]]
 
-        for belt in belts_to_process:
-            print(f"\n{'=' * 50}")
-            print(f"{belt.upper()} BELT POSITIONS")
-            print("=" * 50)
+    total_downloaded = 0
+    total_folders = 0
 
-            for tech_id, tech_name in POSITIONS.get(belt, {}).items():
-                process_technique(args.category, tech_id, tech_name, belt, args.auto)
+    for category in categories:
+        category_dir = base_dir / category
+        if not category_dir.exists():
+            continue
 
-    print("\n" + "=" * 50)
-    print("DONE!")
-    print("=" * 50)
-    print(f"\nImages/URLs saved to: {BASE_DIR}")
-    print("\nNext steps:")
-    print("1. Check each folder for 'download_urls.txt'")
-    print("2. Open the URLs and save relevant images")
-    print("3. Rename files: 01_photo_side.jpg, 02_diagram.jpg, etc.")
-    if not HAS_ICRAWLER:
-        print("\nTip: Install icrawler for automatic downloads:")
-        print("  pip install icrawler")
+        print(f"\n{'='*60}")
+        print(f"Category: {category.upper()}")
+        print('='*60)
 
+        for technique_dir in sorted(category_dir.iterdir()):
+            if technique_dir.is_dir():
+                total_folders += 1
+                downloaded = process_technique_folder(str(technique_dir))
+                total_downloaded += downloaded
 
-if __name__ == "__main__":
+    print(f"\n{'='*60}")
+    print(f"COMPLETE: Downloaded {total_downloaded} images across {total_folders} folders")
+    print('='*60)
+
+if __name__ == '__main__':
     main()
